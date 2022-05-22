@@ -28,7 +28,7 @@ router.get('/contactos',(req,res)=>{
 			if (err){
 				return console.error(err.message);
 			}else{
-			res.render("contactos.ejs",{tarea:rows});
+			res.render("contactos.ejs",{datos:rows});
 			}
 	})
 })
@@ -62,7 +62,7 @@ router.post('/',(req,res)=>{
 
 
 router.get('/',(req,res)=>{
-	res.render('index.ejs',{tarea:{}})
+	res.render('index.ejs',{datos:{}})
 });
 
 
