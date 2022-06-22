@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="/stylesheets/c3.css"> 
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?render=6LcMTCcgAAAAAPR3zsz63HZX70cws2TU6AHtmJG8"></script>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXXMXLEBYF"></script>
 <script>
@@ -156,7 +155,7 @@
         <div class="aficiones">
           <h2 class="title2">aficiones</h2>
           <ul>
-              <li><i class="fa fa-gamepad" aria-hidden="true"></i>Video Juegos</li>
+              <li><i class="fa fa-gamepad" aria-hidden="true"></i>VideoJuegos</li>
               <li><i class="fa fa-music" aria-hidden="true"></i>musica</li>
               <li><i class="fa fa-trophy" aria-hidden="true"></i>artes marciales</li>
               <li><i class="fa fa-puzzle-piece" aria-hidden="true"></i>puzzles</li>
@@ -188,22 +187,21 @@
            
                 <input type="text" name="nombre" placeholder="nombre" value= "<%=datos.name%>">
                 <input type="text" name="email" placeholder="email" value= "<%=datos.email%>">
-                <textarea name="comentario"  rows="10" placeholder="Escribir mensaje" ></textarea> <%=datos.comentario%>
-                <button onclick="vf()" type="submit" class="btn btn-primary" >Enviar</button>
-                <div
-                class="g-recaptcha"
-                data-sitekey="<6LcMTCcgAAAAAPR3zsz63HZX70cws2TU6AHtmJG8>"
-              ></div>
+                <textarea name="comentario"  rows="10" placeholder="Escribir mensaje" ></textarea> <%=datos.comentario%>  
+                <div class="g-recaptcha" data-sitekey="<%= SITE_KEY%>"></div>
+		<input class="botons" type="submit" name="Enviar" id='boton'value="Enviar">
             </div>
-            
+
+  
+             <input type="hidden" name="ip" value="<%= datos.ip%>"/>
+                <input type="hidden" name="fecha" value="<%= datos.fecha%>">
+             <input type="hidden" name="country" value="<%= datos.country%>">
                 
                 
         </form>
-         <!--Hora,IP,y Fecha-->
-      <input type="hidden" name="ip" value="<%= datos.ip%>"/>
-      <input type="hidden" name="date" value="<%= datos.fecha%>">
-      <input type="hidden" name="country" value="<%= datos.country%>">
-        
+         
+                
+               
         
         
     </div> 
